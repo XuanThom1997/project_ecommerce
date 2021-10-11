@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="thom" translate="label" sortOrder="10">
+            <label>Thom</label>
+        </tab>
+        <section id="social" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="130" >
+            <class>separator-top</class>
+            <label>social</label>
+            <tab>thom</tab>
+            <resource>Magento_Cms::save</resource>
+            <group id="social_config" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" type="text">
+                <label>Social Config</label>
+                <field id="facebook" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Facebook</label>
+                    <comment>Link facebook</comment>
+                </field>
+                <field id="google" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Google</label>
+                    <comment>Link google</comment>
+                </field>
+                <field id="twitter" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Twitter</label>
+                    <comment>Link twitter</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
