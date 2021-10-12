@@ -13,5 +13,13 @@
         <css src="css/fontawesome/regular.css"/>
         <css src="css/fontawesome/solid.css"/>
         <css src="css/style.css"/>
+	    <css src="https://use.fontawesome.com/releases/v5.7.1/css/all.css" src_type="url"/>
+        <css src="css/style/App-style.css" rel="stylesheet" type="text/css" />
+        <css src="css/style/Pages-home-index.css" rel="stylesheet" type="text/css" />
+        <css src="css/common.v1.1.css" rel="stylesheet" type="text/css" />
+        <css src="css/default.css" rel="stylesheet" type="text/css" />
+        <css src="css/general.css" rel="stylesheet" type="text/css" />
+        <css src="css/home-index.css" rel="stylesheet" type="text/css" />
+        <css src="css/modal.css" rel="stylesheet" type="text/css" />
     </head>
 </page>

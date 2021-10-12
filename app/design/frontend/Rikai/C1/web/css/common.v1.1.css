@@ -1,0 +1,940 @@
+@charset "UTF-8";
+/**
+ * ------------------------------------------------------------
+ * 1S1C クーポンカラーコード
+ * ------------------------------------------------------------
+ */
+
+/* 文字色 */
+
+.coupon_c1,
+.text-coupon-1,
+.text-coupon-1:hover,
+.text-coupon-1:focus,
+.text-coupon-1:active {
+    color: #fe3f51;
+}
+
+.coupon_c2,
+.text-coupon-2,
+.text-coupon-2:hover,
+.text-coupon-2:focus,
+.text-coupon-2:active {
+    color: #2797ff;
+}
+
+.coupon_c3,
+.text-coupon-3,
+.text-coupon-3:hover,
+.text-coupon-3:focus,
+.text-coupon-3:active {
+    color: #fe5ead;
+}
+
+.coupon_c4,
+.text-coupon-4,
+.text-coupon-4:hover,
+.text-coupon-4:focus,
+.text-coupon-4:active {
+    color: #00c4d6;
+}
+
+.coupon_c5,
+.text-coupon-5,
+.text-coupon-5:hover,
+.text-coupon-5:focus,
+.text-coupon-5:active {
+    color: #66bc27;
+}
+
+.coupon_c6,
+.text-coupon-6,
+.text-coupon-6:hover,
+.text-coupon-6:focus,
+.text-coupon-6:active {
+    color: #ff9000;
+}
+
+.coupon_c7,
+.text-coupon-7,
+.text-coupon-7:hover,
+.text-coupon-7:focus,
+.text-coupon-7:active {
+    color: #775cda;
+}
+
+.cpTriangle.coupon_c1_D:after {
+    border-bottom-color: #fe3f51;
+}
+
+.cpTriangle.coupon_c2_D:after {
+    border-bottom-color: #2797ff;
+}
+
+.cpTriangle.coupon_c3_D:after {
+    border-bottom-color: #fe5ead;
+}
+
+.cpTriangle.coupon_c4_D:after {
+    border-bottom-color: #00c4d6;
+}
+
+.cpTriangle.coupon_c5_D:after {
+    border-bottom-color: #66bc27;
+}
+
+.cpTriangle.coupon_c6_D:after {
+    border-bottom-color: #ff9000;
+}
+
+.cpTriangle.coupon_c7_D:after {
+    border-bottom-color: #775cda;
+}
+
+/* 背景色 */
+
+.coupon_c1_D,
+.bg-coupon-1 {
+    background: #fe3f51;
+}
+
+.coupon_c2_D,
+.bg-coupon-2 {
+    background: #2797ff;
+}
+
+.coupon_c3_D,
+.bg-coupon-3 {
+    background: #fe5ead;
+}
+
+.coupon_c4_D,
+.bg-coupon-4 {
+    background: #00c4d6;
+}
+
+.coupon_c5_D,
+.bg-coupon-5 {
+    background: #66bc27;
+}
+
+.coupon_c6_D,
+.bg-coupon-6 {
+    background: #ff9000;
+}
+
+.coupon_c7_D,
+.bg-coupon-7 {
+    background: #775cda;
+}
+
+/* ラベル用透過 */
+
+/* 移行前 */
+
+.feed-tag-coupon.coupon_c1_D {
+    background: rgba(254, 63, 81, 0.9);
+}
+
+.feed-tag-coupon.coupon_c2_D {
+    background: rgba(39, 151, 255, 0.9);
+}
+
+.feed-tag-coupon.coupon_c3_D {
+    background: rgba(254, 94, 173, 0.9);
+}
+
+.feed-tag-coupon.coupon_c4_D {
+    background: rgba(0, 196, 214, 0.9);
+}
+
+.feed-tag-coupon.coupon_c5_D {
+    background: rgba(102, 188, 39, 0.9);
+}
+
+.feed-tag-coupon.coupon_c6_D {
+    background: rgba(255, 144, 0, 0.9);
+}
+
+.feed-tag-coupon.coupon_c7_D {
+    background: rgba(119, 92, 218, 0.9);
+}
+
+/* 移行後 */
+
+.feed-tag.-coupon.coupon_c1_D {
+    background: rgba(254, 63, 81, 0.9);
+}
+
+.feed-tag.-coupon.coupon_c2_D {
+    background: rgba(39, 151, 255, 0.9);
+}
+
+.feed-tag.-coupon.coupon_c3_D {
+    background: rgba(254, 94, 173, 0.9);
+}
+
+.feed-tag.-coupon.coupon_c4_D {
+    background: rgba(0, 196, 214, 0.9);
+}
+
+.feed-tag.-coupon.coupon_c5_D {
+    background: rgba(102, 188, 39, 0.9);
+}
+
+.feed-tag.-coupon.coupon_c6_D {
+    background: rgba(255, 144, 0, 0.9);
+}
+
+.feed-tag.-coupon.coupon_c7_D {
+    background: rgba(119, 92, 218, 0.9);
+}
+
+/* 高ポイント */
+
+.coupon_c1_H {
+    background: #d60000;
+}
+
+.coupon_c2_H {
+    background: #005ad4;
+}
+
+.coupon_c3_H {
+    background: #eb247d;
+}
+
+.coupon_c4_H {
+    background: #01a0c2;
+}
+
+.coupon_c5_H {
+    background: #04a000;
+}
+
+.coupon_c6_H {
+    background: #ff6c00;
+}
+
+.coupon_c7_H {
+    background: #542cae;
+}
+
+/* 低ポイント */
+
+.coupon_c1_L {
+    background: #ff718c;
+}
+
+.coupon_c2_L {
+    background: #4ec7ff;
+}
+
+.coupon_c3_L {
+    background: #fc93d8;
+}
+
+.coupon_c4_L {
+    background: #69ddd8;
+}
+
+.coupon_c5_L {
+    background: #acd335;
+}
+
+.coupon_c6_L {
+    background: #fdc227;
+}
+
+.coupon_c7_L {
+    background: #c48af0;
+}
+
+/* ボーダー */
+
+.border-coupon-1 {
+    border: 1px solid #fe3f51;
+}
+
+.border-coupon-2 {
+    border: 1px solid #2797ff;
+}
+
+.border-coupon-3 {
+    border: 1px solid #fe5ead;
+}
+
+.border-coupon-4 {
+    border: 1px solid #00c4d6;
+}
+
+.border-coupon-5 {
+    border: 1px solid #66bc27;
+}
+
+.border-coupon-6 {
+    border: 1px solid #ff9000;
+}
+
+.border-coupon-7 {
+    border: 1px solid #775cda;
+}
+
+/**
+ * ------------------------------------------------------------
+ * クーポンバナー
+ * ------------------------------------------------------------
+ */
+
+.couponBanner,
+.couponBanner:before,
+.couponBanner:after,
+.couponBanner *,
+.couponBanner *:before,
+.couponBanner *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.couponBanner {
+    color: #ffffff;
+}
+
+.couponBanner:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.couponBannerRow {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    height: 60px;
+}
+
+.couponBannerCol {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.couponBannerCol+.couponBannerCol {
+    padding-left: 10px;
+}
+
+.couponBannerCol+.couponBannerCol.couponBannerValue {
+    padding-left: 5px;
+}
+
+.couponBannerValue,
+.couponBannerCaption,
+.couponBannerAction {
+    padding-top: 1px;
+}
+
+.couponBannerReminder {
+    width: 112px;
+    line-height: 1;
+}
+
+.couponBannerReminderGroup {
+    display: none;
+    margin: -26px 0 -26px;
+    border-radius: 56px;
+    padding: 32px 15px;
+    width: 112px;
+    height: 112px;
+    background: #ffffff;
+}
+
+.couponBannerReminderLabel {
+    border-radius: 2px;
+    padding: 4px 3px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}
+
+.couponBannerReminderContent {
+    text-align: center;
+}
+
+.couponBannerCounterLead,
+.couponBannerCounterNumber,
+.couponBannerCounterUnit {
+    display: inline-block;
+}
+
+.couponBannerCounterLead,
+.couponBannerCounterUnit {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.couponBannerCounterNumber,
+.couponBannerCounterUnit {
+    margin-left: -2px;
+}
+
+.couponBannerCounterLead {
+    width: 1em;
+}
+
+.couponBannerCounterNumber {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+}
+
+.couponBannerClosingCaption {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.couponBannerValue {
+    width: 1%;
+}
+
+.couponBannerValueNumber {
+    display: inline-block;
+    margin: -25px 0 -23px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.020833333em;
+    vertical-align: middle;
+}
+
+.couponBannerValueMax {
+    font-size: 18px;
+    width: 1.5em;
+    line-height: 1;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.couponBannerCaption {
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.couponBannerCaptionNames {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+.couponBannerCaptionDescription {
+    margin-top: 1px;
+    font-size: 18px;
+    line-height: 1.2777777778;
+}
+
+.couponBannerAction {
+    width: 370px;
+}
+
+.couponBannerActionRow {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.couponBannerActionCol {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.couponBannerActionCol+.couponBannerActionCol {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+.couponBannerActionBtn {
+    display: block;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 8px 5px;
+    min-height: 35px;
+    font-size: 12px;
+    line-height: 1.416666667;
+    text-align: center;
+}
+
+.couponBannerActionBtnPrimary {
+    background: #ffffff;
+}
+
+.couponBannerActionBtnSecondary {
+    color: #ffffff !important;
+}
+
+.couponBannerActionBtnSecondary:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.couponBannerReminderGroup.active {
+    display: block;
+}
+
+.couponBannerCounter .couponBannerReminderContent {
+    margin-top: 1px;
+}
+
+.couponBannerClosing .couponBannerReminderContent {
+    margin-top: 7px;
+}
+
+html.win .couponBannerClosing .couponBannerReminderContent {
+    margin-top: 8px;
+}
+
+.couponBannerActionBtnPrimary,
+.couponBannerActionBtnPrimary:link,
+.couponBannerActionBtnPrimary:visited,
+.couponBannerActionBtnPrimary:hover,
+.couponBannerActionBtnPrimary:active {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+.couponBannerActionBtnPrimary:hover {
+    background-color: #f0f0f0;
+}
+
+/* カートトップ */
+
+#modalCouponList {
+    min-height: 320px;
+}
+
+.couponArrowTop {
+    margin: 5px 0 0;
+    font-size: 10px;
+    padding: 7px 10px 5px;
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+}
+
+.couponArrowTop a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin 0 0 0 5px;
+}
+
+.couponArrowTop:after {
+    bottom: 80%;
+    right: 6%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+/* クーポンモーダル */
+
+.modalCoupon {
+    padding: 50px;
+    text-align: center;
+}
+
+.modalCoupon .headerH {
+    font-size: 24px;
+}
+
+#modalCouponList.indexPicture.indexColumnCount4 {
+    padding: 0 0 0 7px;
+}
+
+#modalCouponList.indexPicture.indexColumnCount4 .indexItem {
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 114px;
+}
+
+.oneShopCoupon .feedLink:hover {
+    text-decoration: none;
+}
+
+.modalCoupon .gBtn.btnL {
+    width: 100%;
+}
+
+.modalCoupon .gBtnWhite:hover {
+    background: #ffffff;
+}
+
+.modalCoupon .noItem {
+    text-align: center;
+    font-size: 16px;
+    margin: 120px auto 130px;
+}
+
+.modalCoupon .andmore {
+    padding: 15px;
+    margin-top: -5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.modalCoupon .andmore.hide {
+    display: none;
+}
+
+/**
+ * ------------------------------------------------------------
+ * ページ埋め込み型クーポン一覧
+ * ------------------------------------------------------------
+ */
+
+.cpTriangle {
+    position: relative;
+}
+
+.cpTriangle:after {
+    border: 14px solid transparent;
+    bottom: 100%;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -14px;
+    position: absolute;
+    width: 0;
+}
+
+#inlineCoupon {
+    position: relative;
+    margin: 45px auto 0;
+    padding-bottom: 30px;
+    width: 680px;
+    color: #ffffff;
+}
+
+#inlineCoupon .container {
+    overflow: hidden;
+    font-size: 10px;
+    text-align: center;
+}
+
+#inlineCoupon .ovDayInfo {
+    margin-top: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#inlineCoupon .lastDay {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 5px 15px;
+    background: #ffffff;
+    font-size: 14px;
+    line-height: 1.1;
+    vertical-align: middle;
+}
+
+#inlineCoupon .infoText {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+#inlineCoupon .weekDay {
+    display: inline-block;
+    margin: 0 3px;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+#inlineCoupon .container .img {
+    padding: 0 24px;
+}
+
+#inlineCoupon .container img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#inlineCoupon .container #cpRegistText {
+    margin: 15px 20px 0;
+    font-size: 16px;
+}
+
+#inlineCoupon .container #cpRegistBrand,
+#inlineCoupon .container #cpRegistBrand+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#inlineCoupon.oneShop .container #cpRegistBrand {
+    font-size: 17px;
+}
+
+#inlineCoupon .container .btnAllItem .btnBlueM {
+    display: block;
+    border-radius: 5px;
+    padding: 8px 10px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+#inlineCoupon .container .btnAllItem .btnBlueM.tapStyle {
+    background-color: #f0f0f0;
+}
+
+#inlineCoupon .container .btnAllItem .btnText {
+    display: block;
+}
+
+#inlineCoupon .container .btnAllItem .itemCount {
+    display: block;
+    margin-top: 3px;
+    font-size: 11px;
+}
+
+#inlineCoupon .container .txt {
+    margin: 15px 0 0 0;
+}
+
+#inlineCoupon .container .txt a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#inlineCoupon .pointTxt {
+    margin-top: 22px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+#inlineCoupon .pointTxt .pointTxtTtl,
+#inlineCoupon .pointTxt .pointTxtNum {
+    display: block;
+    color: #fff;
+    line-height: 1;
+    margin-top: -3px;
+    font-size: 128px;
+    letter-spacing: -0.023809524em;
+}
+
+#inlineCoupon .pointTxt .pointTxtTtl {
+    font-size: 38px;
+}
+
+#inlineCoupon .pointTxt .pointTxtNum .maxmam {
+    display: inline-block;
+    width: 1.2em;
+    font-size: 46px;
+    line-height: 1.2;
+}
+
+#inlineCoupon .indexPicture.indexColumnCount4 .indexItem {
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 25%;
+}
+
+#inlineCoupon .indexPicture.indexColumnCount4 {
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 0 10px 0 0;
+}
+
+#inlineCoupon .andmore {
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+    padding: 15px 10px 10px;
+    margin-top: -5px;
+    color: #888888;
+    font-size: 12px;
+}
+
+#inlineCoupon .gridContainer {
+    width: 560px;
+    margin: auto;
+}
+
+#inlineCoupon .btn-secondary {
+    background: #ffffff;
+    border-color: #ffffff;
+    font-size: 20px;
+    color: #333333;
+    padding: 20px 15px 19px;
+}
+
+#inlineCoupon .y-condensed {
+    padding: 15px 15px 14px;
+}
+
+/* チケット */
+
+.coupon_invalid {
+    background: #cccccc;
+}
+
+.oneShopCoupon {}
+
+.oneShopCoupon .feedLink {
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+}
+
+.oneShopCoupon .feedIcon {
+    padding: 24px;
+}
+
+.oneShopCoupon .shopH {
+    color: #ffffff;
+    margin: 5px 5px 0;
+    overflow: hidden;
+    font-size: 10px;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+.oneShopCoupon .feedImg {
+    width: 100%
+}
+
+.oneShopCoupon .feedContent {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.oneShopCoupon .conponPriceAmount {
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+}
+
+.coupon_invalid .conponPriceAmount {
+    margin-top: -5px;
+}
+
+.oneShopCoupon .conponUsed {
+    font-size: 10px;
+    color: #ffffff;
+    display: block;
+    margin: -5px 0;
+}
+
+.indexPicture.indexColumnCount2 .oneShopCoupon.indexItem {
+    margin-top: 10px;
+}
+
+.oneShopCoupon .couponOutline {
+    border-top: dashed 1px #ffffff;
+    position: relative;
+}
+
+.oneShopCoupon .couponOutline::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    left: -3px;
+    top: -3px;
+    z-index: 1;
+}
+
+.oneShopCoupon .couponOutline::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    right: -3px;
+    top: -3px;
+    z-index: 1;
+}
+
+.oneShopCoupon .feedImgWrap {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 14px;
+}
+
+/**
+ * ------------------------------------------------------------
+ * サーチ、グッズ
+ * ------------------------------------------------------------
+ */
+
+/*ラベル*/
+
+.couponNow {
+    display: inline-block;
+    margin-top: 2px;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+/* クーポンアイコンgoods用 */
+
+#couponGoodsBox {
+    padding: 0 0 10px;
+}
+
+#couponGoodstxt {
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+#couponGoodstxt .allCouponShop {
+    color: #ffffff;
+    display: block;
+    padding: 8px 0 7px 6px;
+    text-align: center;
+}
+
+#couponGoodstxt .allCouponShop .itemLink {
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+#couponGoodstxt:hover .allCouponShop {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    text-decoration: none;
+}
+
+#useCouponPrice {
+    font-size: 12px;
+    color: #E73656;
+    padding-top: 5px;
+}
+
+#useCouponPrice .bold {
+    font-weight: bold;
+}
