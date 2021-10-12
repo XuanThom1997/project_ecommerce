@@ -2,6 +2,11 @@
     <i class="far fa-bell"></i>
 
     <div class="dropdown-header-notification-content">
-        <span><?php $block->getLine(); ?></span>
+        <div class="dropdown-header-message-icon">
+            <i class="far fa-bell"></i>
+        </div>
+        <div class="dropdown-header-message-text">
+            <span><?= $block->getLine(); ?></span>
+        </div>
     </div>
 </div>
