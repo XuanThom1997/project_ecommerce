@@ -58,7 +58,6 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
         if($this->getViewMode() == 'mode_grid_custom'){
 			$this->setTemplate('widget/product_grid_custom.phtml');
 		}
-        
 		return parent::_toHtml();
     }
 	
@@ -206,11 +205,7 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
 	public function getEncodedUrl($url)
     {
         return $this->urlHelper->getEncodedUrl($url);
-    }
-	
-	public function getViewAll(){
-		return __('View All');
-	}	
+    }	
 
 	public function getCategoryId(){
 		return $this->_category_id;

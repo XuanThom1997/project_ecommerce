@@ -1,42 +1,5 @@
 <?xml version="1.0" ?>
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
-    <widget class="Rikai\WidgetProduct\Block\ShowProduct" id="rikai_widget_product_show">
-        <label>Custom Products</label>
-        <description>List Products</description>
-        <parameters>
-            <parameter name="title" sort_order="10" visible="true" xsi:type="text" required="true">
-                <label>Title</label>
-            </parameter>
-            <parameter name="products_sort_by" sort_order="20" visible="true" xsi:type="select" required="true" source_model="Rikai\WidgetProduct\Model\SortBy">
-                <label>Sort Products By</label>
-            </parameter>
-            <parameter name="products_sort_order" sort_order="20" visible="true" xsi:type="select" required="true" source_model="Rikai\WidgetProduct\Model\SortOrder">
-                <label>Sort Products By</label>
-            </parameter>
-            <parameter name="show_pager" sort_order="40" visible="true" xsi:type="select" required="true" source_model="Magento\Config\Model\Config\Source\YesNo">
-                <label>Display Cage Control</label>
-            </parameter>
-            <parameter name="products_per_page" visible="true" xsi:type="text" required="true">
-                <label>Number Of Products Per Page</label>
-                <depends>
-                    <parameter name="show_pager" value="1" />
-                </depends>
-                <value>5</value>
-            </parameter>
-            <parameter name="products_count" sort_order="40" visible="true" xsi:type="text" >
-                <label>Number Of Products to Display</label>
-                <value>10</value>
-            </parameter>
-            <parameter name="template" sort_order="40" visible="true" xsi:type="select" required="true" >
-                <label>Template</label>
-                <options>
-                    <option name="default" value="Magento_CatalogWidget::product/widget/content/grid.phtml" selected="true">
-                        <label>Products Grid Template </label>
-                    </option>
-                </options>
-            </parameter>
-        </parameters>
-    </widget>
     <widget class="Rikai\WidgetProduct\Block\Widget\ProductList" id="rikai_widget_product_list_grid">
         <label>Custom Products List</label>
         <description>List Products</description>
@@ -83,4 +46,16 @@
             </parameter>
         </parameters>
     </widget>
+    <widget id="category_navigation" class="Rikai\WidgetProduct\Block\Widget\CategoryNavigation">
+		<label translate="true">MGS Category Navigation</label>
+		<description>Menu Category Widget</description>
+		<parameters>
+			<parameter name="title" xsi:type="text" visible="true" sort_order="15">
+				<label translate="true">Title</label>
+			</parameter>
+			<parameter name="category_id" required="true" xsi:type="multiselect" visible="true" sort_order="20" source_model="Rikai\WidgetProduct\Model\Config\Source\CategoryListMenu">
+				<label translate="true">Category to show</label>
+			</parameter>
+		</parameters>
+	</widget>
 </widgets>

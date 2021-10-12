@@ -1,0 +1,199 @@
+@charset "Shift_JIS";
+/*-------------------------------------
+	共通
+-------------------------------------*/
+
+.laterContent .modalSection {
+    text-align: center;
+    margin: 50px auto 0;
+    width: 620px;
+    padding-bottom: 15px;
+}
+
+.laterContent .modalSection .laterSectionH {
+    font-size: 30px;
+    padding-top: 97px;
+}
+
+.laterContent .modalSection .laterTxt {
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 24px;
+}
+
+.laterContent .modalSection .laterImg {
+    margin: 32px 0 18px;
+}
+
+.laterContent .modalSection .laterInfo {
+    margin: 6px 0 0;
+    font-size: 11px;
+    line-height: 2;
+    color: #808080;
+}
+
+.laterContent .cover {
+    text-align: center;
+    padding-top: 50px;
+    height: 354px;
+    background: url(//o.imgz.jp/later-payment/pc/lp/bg.png) repeat-x left bottom;
+}
+
+.laterContent h2 {
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.28;
+}
+
+.later-payment-read {
+    font-size: 30px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.later-payment-limit {
+    font-size: 50px;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+/*-------------------------------------
+	sec01
+-------------------------------------*/
+
+.laterContent #laterSec01 .laterSectionH {
+    background: url(//o.imgz.jp/later-payment/pc/lp/ico_sec01.png) no-repeat center top;
+}
+
+/*-------------------------------------
+	sec02
+-------------------------------------*/
+
+.laterContent #laterSec02 .laterSectionH {
+    background: url(//o.imgz.jp/later-payment/pc/lp/ico_sec02.png) no-repeat center top;
+}
+
+/*-------------------------------------
+	sec025
+-------------------------------------*/
+
+.laterContent #laterSec025 .laterSectionH {
+    background: url(//o.imgz.jp/later-payment/pc/lp/ico_sec025.png) no-repeat center top;
+}
+
+/*-------------------------------------
+	sec03
+-------------------------------------*/
+
+.laterContent #laterSec03 {
+    width: 100%;
+}
+
+.laterContent #laterSec03 .laterSectionH {
+    background: url(//o.imgz.jp/later-payment/pc/lp/ico_sec03.png) no-repeat center top;
+}
+
+/* ツケ払いの流れ */
+
+.later-payment-flow {
+    margin: 30px 10px 0 10px;
+    text-align: center;
+}
+
+.later-payment-flow-list {
+    margin: 0 -10px;
+}
+
+.later-payment-flow-list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.later-payment-flow-item {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.later-payment-flow-item::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #888888;
+    border-right: 2px solid #888888;
+    transform: translate(-75%, -50%) rotate(45deg);
+}
+
+.later-payment-flow-item:first-child::before {
+    content: none;
+}
+
+.later-payment-flow-item-thumbs {
+    position: relative;
+    z-index: 1;
+    width: 90px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.later-payment-flow-item-thumbs img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.later-payment-flow-item-contents {
+    margin-top: 15px;
+}
+
+.later-payment-flow-item-heading {
+    font-size: 16px;
+}
+
+.later-payment-flow-item-description {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.later-payment-flow-note {
+    margin-top: 30px;
+    line-height: 2;
+    font-size: 11px;
+    color: #808080;
+}
+
+/*-------------------------------------
+	button
+-------------------------------------*/
+
+.laterContent .laterBtnArea {
+    margin: 25px 0 50px;
+    text-align: center;
+}
+
+.laterContent .laterBtnArea .gBtnWhite {
+    margin: auto;
+}
+
+.laterContent .closeBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Rikai_C1::css/fontawesome/fontawesome.css"/>
+        <css src="Rikai_C1::css/fontawesome/regular.css"/>
+        <css src="Rikai_C1::css/fontawesome/solid.css"/>
+    </head>
+</page>
