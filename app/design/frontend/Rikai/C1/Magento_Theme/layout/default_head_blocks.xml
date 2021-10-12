@@ -7,6 +7,11 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-	<css src="https://use.fontawesome.com/releases/v5.7.1/css/all.css" src_type="url"/>
+        <css src="css/bootstrap.min.css"/>
+        <script src="js::bootstrap.js"/>
+        <css src="css/fontawesome/fontawesome.css"/>
+        <css src="css/fontawesome/regular.css"/>
+        <css src="css/fontawesome/solid.css"/>
+        <css src="css/style.css"/>
     </head>
 </page>
