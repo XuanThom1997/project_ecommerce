@@ -14,7 +14,7 @@
             <referenceContainer name="header-wrapper" >
                 <block class="Rikai\C1\Block\NewDropdown"  name="test-dropdown" template="Rikai_C1::newDropdown.phtml" before="minicart"/>
                 <block class="Rikai\C1\Block\Notification\Notification"  name="dropdown-header-notification" template="Rikai_C1::notification.phtml" before="custom-login-link"/>
-                <block class="Rikai\C1\Block\Favorite\Favorite"  name="dropdown-header-favorite" template="Rikai_C1::favorite.phtml" before="dropdown-header-notification"/>
+                <block class="Rikai\C1\Block\Favorite\Favorite" name="dropdown-header-favorite" template="Rikai_C1::favorite.phtml" before="dropdown-header-notification"/>
 		        <block class="Rikai\C1\Block\Link" name="custom-login-link">
                     <arguments>
                         <argument name="label" xsi:type="string" translate="true" >Sign in</argument>
@@ -36,6 +36,25 @@
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="copyright" remove="true" />
 	    <referenceBlock name="advanced-search-link" remove="true" />
+
+        <referenceContainer name="main">
+            <referenceContainer name="content" remove="true" />
+            <referenceContainer name="content.aside" remove="true" />
+            <referenceContainer name="content.bottom" remove="true" />
+
+            <container name="body" as="body" htmlTag="div" htmlClass="p-home-body">
+                <container name="body-container" as="body-container" htmlTag="div" htmlClass="p-home-body-container">
+                    <container name="body-side-left" htmlTag="div" htmlClass="p-home-body-side--left">
+                        <block class="Rikai\C1\Block\Components\LeftBar\Search" name="side-left-search" template="Rikai_C1::components/leftbar/search.phtml" />
+                        <block class="Rikai\C1\Block\Components\LeftBar\PickUp" name="side-left-pickup" template="Rikai_C1::components/leftbar/pickup.phtml" />
+                        <block class="Rikai\C1\Block\Components\LeftBar\News" name="side-left-news" template="Rikai_C1::components/leftbar/news.phtml" />
+                        <block class="Rikai\C1\Block\Components\LeftBar\Recruit" name="side-left-recruit" template="Rikai_C1::components/leftbar/recruit.phtml" />
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="page.bottom.container" remove="true" />
 
         <referenceContainer name="footer-container">
             <referenceContainer name="footer" remove="true" />

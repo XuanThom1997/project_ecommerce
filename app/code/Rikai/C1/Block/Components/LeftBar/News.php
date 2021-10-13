@@ -1,11 +1,10 @@
 <?php
-
-namespace Rikai\C1\Block\Favorite;
+namespace Rikai\C1\Block\Components\LeftBar;
 
 use Magento\Framework\View\Element\Template;
 
-class Favorite extends Template{
-
+class News extends Template
+{
     public function __construct(\Magento\Framework\View\Element\Template\Context $context)
 	{
 		parent::__construct($context);
@@ -13,6 +12,6 @@ class Favorite extends Template{
 
 	public function getLine()
 	{
-		return __('Favorite');
+		return __('Hello World');
 	}
 }
