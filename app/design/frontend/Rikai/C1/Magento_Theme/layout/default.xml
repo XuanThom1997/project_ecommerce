@@ -9,7 +9,7 @@
     <body>
 	    <referenceContainer name="header.container" >
             <referenceBlock name="header.panel.wrapper" remove="true"/>
-		<container htmlTag="div" htmlClass="box" >	
+		<container htmlTag="div" htmlClass="box" >
 		</container>
             <referenceContainer name="header-wrapper" >
                 <block class="Rikai\C1\Block\NewDropdown"  name="test-dropdown" template="Rikai_C1::newDropdown.phtml" before="minicart"/>
@@ -22,19 +22,35 @@
                     </arguments>
                 </block>
             </referenceContainer>
-         </referenceContainer>
+        </referenceContainer>
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/custom_logo.png</argument>
- 		        <argument name="logo_alt" xsi:type="string">Rikai Technology</argument> 
-                <argument name="logo_width" xsi:type="number">50</argument> 
+                <argument name="logo_alt" xsi:type="string">Rikai Technology</argument>
+                <argument name="logo_width" xsi:type="number">50</argument>
                 <argument name="logo_height" xsi:type="number">50</argument>
             </arguments>
         </referenceBlock>
-	
+        <referenceContainer name="main">
+            <container label="Category List" name="column_category" htmlTag="div" htmlClass="column-category" />
+            <container label="Products List" name="column_product" htmlTag="div" htmlClass="column-product" />
+        </referenceContainer>
         <referenceBlock name="top.links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="copyright" remove="true" />
+	    <referenceBlock name="advanced-search-link" remove="true" />
+<!-- 
+        <referenceContainer name="footer-container">
+            <referenceContainer name="footer" remove="true" />
+            <container name="footer_cotent" as="footer_content" label="Page Footer" htmlTag="div" htmlId="gblFooter" htmlClass="footer">
+                <container name="wrapper" as="wrapper" label="Wraper Footer" htmlTag="div" htmlId="fWrapper">
+                    <block class="Rikai\C1\Block\Footer\Content" name="footer-sitemap" as="footer-sitemap" template="Rikai_C1::footer/content.phtml" before="fcorporate"/>
+                    <block class="Rikai\C1\Block\Footer\Endding" name="fcorporate" as="fcorporate" template="Rikai_C1::footer/endding.phtml" after="fcorporate"/>
+                </container>
+            </container>
+        </referenceContainer> -->
+    <referenceBlock name="page.main.title" display="false"/>
+
 	<referenceBlock name="advanced-search-link" remove="true" />
     </body>
 </page>
