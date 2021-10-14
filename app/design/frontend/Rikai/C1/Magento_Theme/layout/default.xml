@@ -18,11 +18,13 @@
 		        <block class="Rikai\C1\Block\Link" name="custom-login-link" template="Rikai_C1::link.phtml">
                 </block>
             </referenceContainer>
-        </referenceContainer>
+
+
+         </referenceContainer>
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/custom_logo.png</argument>
-                <argument name="logo_alt" xsi:type="string">Rikai Technology</argument>
+ 		        <argument name="logo_alt" xsi:type="string">Rikai Technology</argument>
                 <argument name="logo_width" xsi:type="number">50</argument>
                 <argument name="logo_height" xsi:type="number">50</argument>
             </arguments>
@@ -35,7 +37,7 @@
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="copyright" remove="true" />
 	    <referenceBlock name="advanced-search-link" remove="true" />
-<!-- 
+<!--
         <referenceContainer name="footer-container">
             <referenceContainer name="footer" remove="true" />
             <container name="footer_cotent" as="footer_content" label="Page Footer" htmlTag="div" htmlId="gblFooter" htmlClass="footer">
