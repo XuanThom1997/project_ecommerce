@@ -1,0 +1,10 @@
+<?php 
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $userContext = $objectManager->get('Magento\Framework\App\Http\Context');
+    $isLoggedIn = $userContext->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
+    if($isLoggedIn):
+?> 
+<?php echo $block->isLoggedIn();?>
+<?php else: ?>
+    <?php echo $block->notIsLoggedIn();?>
+<?php endif ?>
