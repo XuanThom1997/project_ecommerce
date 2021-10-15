@@ -47,7 +47,7 @@
         </parameters>
     </widget>
     <widget id="category_navigation" class="Rikai\WidgetProduct\Block\Widget\CategoryNavigation">
-		<label translate="true">MGS Category Navigation</label>
+		<label translate="true">Category Navigation</label>
 		<description>Menu Category Widget</description>
 		<parameters>
 			<parameter name="title" xsi:type="text" visible="true" sort_order="15">
