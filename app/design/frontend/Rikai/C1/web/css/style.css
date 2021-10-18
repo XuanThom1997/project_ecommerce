@@ -1,0 +1,109 @@
+.product-content {
+    width: 170px;
+    float: left;
+}
+
+.product-category-name,
+.price-box {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.product-name {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.title {
+    font-weight: 800;
+    padding: 25px 0;
+    font-size: 20px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.block-product-list {
+    margin-bottom: 40px;
+}
+
+a.carousel-control-next.right {
+    font-size: 30px;
+    position: absolute;
+    top: 160px;
+    right: 40px;
+}
+
+a.carousel-control-prev.left {
+    font-size: 30px;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+}
+
+.column-category {
+    width: 200px;
+    float: left;
+    padding-top: 20px;
+}
+
+.column-product {
+    width: 1020px;
+    float: right;
+}
+
+a.link-view-all {
+    float: right;
+}
+
+
+a.fonts18 {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+a.fonts16 {
+    margin-left: 2px;
+    color: black;
+    font-size: 16px;
+}
+
+.dropdown-account {
+    font-size: 20px;
+    float: right;
+    padding: 14px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-account-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+    margin-top: 15px;
+    min-height: 100px;
+    z-index: 1;
+    border: 2px solid #d3caca;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.dropdown-account:hover .dropdown-account-content {
+    display: block;
+}
+
+i.fas.fa-user-circle {
+    color: black;
+}
+
+
+.title-menu{
+    padding-top:10px;
+}
