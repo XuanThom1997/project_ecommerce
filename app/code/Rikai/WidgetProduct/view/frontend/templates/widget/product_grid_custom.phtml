@@ -1,4 +1,4 @@
-<?php 
+<?php
     $products = $this->getProductCollection();
     $blockId = rand() . time();
     $themeHelper = $this->helper('Rikai\WidgetProduct\Helper\Data');
@@ -7,21 +7,26 @@
 
 
 <?php $category = $themeHelper->getCategory($block->getCategoryId());
-    $categoryIdUrl = $category->getCategoryIdUrl(); 
+    $categoryIdUrl = $category->getCategoryIdUrl();
 ?>
 <i class="far fa-arrow-circle-left"></i>
 <div class="block-product-list">
     <?php if($this->getData('title')): ?>
     <div class="block-title">
-        <h2 class="title"><?php echo $this->getData('title'); ?><?php if($block->getCategoryId() != 2): ?><a class="link-view-all" href="<?php echo $categoryIdUrl; ?>"><?php echo __('View All'); ?></a><?php endif ?></h2>
+        <h2 class="title"><?php echo $this->getData('title'); ?><?php if($block->getCategoryId() != 2): ?><a class="link-view-all" href="<?php echo $categoryIdUrl; ?>">View
+            all</a><?php endif ?></h2>
     </div>
     <?php if(count($products)>0): ?>
-    <div id="myCarousel-<?php echo $blockId ?>" class="carousel slide" data-ride="carousel" data-interval="500000"> 
+    <div id="myCarousel-<?php echo $blockId ?>" class="carousel slide" data-ride="carousel" data-interval="500000">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel-<?php echo $blockId ?>" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel-<?php echo $blockId ?>" data-slide-to="1"></li>
+        </ol>
         <div class="block-content row carousel-inner">
                 <?php $i = 0; foreach($products as $_product): $i++;
                 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
                 $productModel = $objectManager->create('Magento\Catalog\Model\Product');
-                $_product = $productModel->load($_product->getId()); 
+                $_product = $productModel->load($_product->getId());
                 ?>
                 <?php if($i == 1): ?>
                     <div class="item active">
@@ -32,7 +37,7 @@
 
                     <?php $_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
                     $size = $themeHelper->getImageSize();
-                    $productImage = $_imagehelper->init($_product, $image)->resize($size['width'], $size['height'])->getUrl();  
+                    $productImage = $_imagehelper->init($_product, $image)->resize($size['width'], $size['height'])->getUrl();
                     ?>
                     <div class="product-content <?php if($i % 2 == 1): ?><?php endif ?>">
                         <div class="product-top">
@@ -56,7 +61,7 @@
                 <?php endif ?>
                 <?php endforeach ?>
                 <?php if($i%6 != 0): ?>
-                    </div>
+                </div>
                 <?php endif ?>
         </div>
         <a class="carousel-control-prev left" href="#myCarousel-<?php echo $blockId ?>" role="button" data-slide="prev">
