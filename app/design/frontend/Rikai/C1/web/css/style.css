@@ -107,3 +107,24 @@ i.fas.fa-user-circle {
 .title-menu{
     padding-top:10px;
 }
+
+.footer-contact{
+    float: right;
+}
+
+a.sssssss{
+    display: inherit;
+}
+
+div#footer-contact{
+    float: right;
+}
+
+div#footer-helper {
+    display: inline-block;
+    padding-right: 100px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+}

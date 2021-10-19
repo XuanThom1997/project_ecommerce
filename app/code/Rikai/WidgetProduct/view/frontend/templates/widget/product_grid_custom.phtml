@@ -18,10 +18,6 @@
     </div>
     <?php if(count($products)>0): ?>
     <div id="myCarousel-<?php echo $blockId ?>" class="carousel slide" data-ride="carousel" data-interval="500000">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel-<?php echo $blockId ?>" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel-<?php echo $blockId ?>" data-slide-to="1"></li>
-        </ol>
         <div class="block-content row carousel-inner">
                 <?php $i = 0; foreach($products as $_product): $i++;
                 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
