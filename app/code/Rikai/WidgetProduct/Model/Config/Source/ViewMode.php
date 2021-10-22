@@ -20,7 +20,6 @@ class ViewMode implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         return [
-			['value' => 'mode_list', 'label' => __('List')],
             ['value' => 'mode_grid_custom', 'label' => __('Custom Grid')],
 		];
     }

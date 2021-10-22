@@ -13,6 +13,7 @@
         <css src="css/fontawesome/regular.css"/>
         <css src="css/fontawesome/solid.css"/>
         <css src="css/style.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" />
         <!-- <css src="css/style/App-style.css" rel="stylesheet" type="text/css" />
         <css src="css/style/Pages-home-index.css" rel="stylesheet" type="text/css" />
         <css src="css/common.v1.1.css" rel="stylesheet" type="text/css" />

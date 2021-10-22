@@ -31,7 +31,15 @@
         </referenceBlock>
         <referenceContainer name="main">
             <container label="Category List" name="column_category" htmlTag="div" htmlClass="column-category" />
-            <container label="Products List" name="column_product" htmlTag="div" htmlClass="column-product" />
+            <container label="Products List" name="column_product" htmlTag="div" htmlClass="column-product">
+                <block class="Magento\Catalog\Block\Widget\RecentlyViewed" name="recently_viewed" template="Rikai_WidgetProduct::product/viewed.phtml" before="-">
+                    <arguments>
+                        <argument name="uiComponent" xsi:type="string">widget_recently_viewed</argument>
+                        <argument name="page_size" xsi:type="number">5</argument>
+                        <argument name="show_attributes" xsi:type="string">name,image,price</argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceContainer>
         <referenceBlock name="top.links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true" />
@@ -64,6 +72,9 @@
         </referenceContainer>
     <referenceBlock name="page.main.title" display="false"/>
 
-	<referenceBlock name="advanced-search-link" remove="true" />
+	<referenceBlock name="dropdown-header-notification" remove="true" />
+    <referenceBlock name="test-dropdown" remove="true" />
+    <referenceBlock name="advanced-search-link" remove="true" />
+     <referenceBlock name="recently_viewed" remove="true" />
     </body>
 </page>

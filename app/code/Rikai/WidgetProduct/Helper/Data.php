@@ -300,7 +300,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 				$j=0; 
 				foreach ($cats as $category_id){
 					$j++;
-					if($j == 3){
+					if($j == 4){
 						break;
 					}
 					$category = $this->_categoryFactory->create();
@@ -321,4 +321,12 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 		    return false;
 		}
 	}
+
+	public function getCategoryUrl($category)
+    {
+        if ($category instanceof ModelCategory) {
+            return $category->getUrl();
+        }
+        return $this->_categoryFactory->create()->setData($category->getData())->getUrl();
+    }
 }

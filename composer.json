@@ -13,10 +13,7 @@
     "version": "2.4.1",
     "require": {
         "magento/composer-root-update-plugin": "~1.0",
-<<<<<<< HEAD
-        "magento/product-community-edition": "2.4.1",
-        "magiccart/magicslider": "^1.0"
-=======
+        "magiccart/magicslider": "^1.0",
         "magento/module-bundle-sample-data": "100.4.*",
         "magento/module-catalog-rule-sample-data": "100.4.*",
         "magento/module-catalog-sample-data": "100.4.*",
@@ -38,7 +35,6 @@
         "magento/module-wishlist-sample-data": "100.4.*",
         "magento/product-community-edition": "2.4.1",
         "magento/sample-data-media": "100.4.*"
->>>>>>> 5583127 (create footer)
     },
     "autoload": {
         "exclude-from-classmap": [

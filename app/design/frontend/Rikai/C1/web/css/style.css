@@ -12,6 +12,9 @@
 .product-name {
     margin-top: 15px;
     font-size: 12px;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .title {
@@ -99,7 +102,7 @@ a.fonts16 {
     display: block;
 }
 
-i.fas.fa-user-circle {
+i.fas.fa-user-circle, i.far.fa-heart {
     color: black;
 }
 

@@ -1,12 +1,6 @@
 <div class="dropdown-header-favorite">
-    <i class="far fa-heart"></i>
+    <?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $baseUrl = $objectManager->get('Magento\Framework\UrlInterface'); ?>
+    <a href="<?php echo $baseUrl->getUrl('wishlist') ?>"><i class="far fa-heart"></i></a>
 
-    <div class="dropdown-header-favorite-content">
-        <div class="dropdown-header-message-icon">
-            <i class="far fa-heart"></i>
-        </div>
-        <div class="dropdown-header-message-text">
-            <span><?= $block->getLine(); ?></span>
-        </div>
-    </div>
 </div>
