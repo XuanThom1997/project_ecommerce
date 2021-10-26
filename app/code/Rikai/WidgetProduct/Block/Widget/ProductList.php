@@ -22,6 +22,10 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
 	protected $_attributeCollection;
 
 	protected $_category_id;
+
+	protected $_mostviewProduct;
+
+	protected $_recenView;
 	
 	public function __construct(
         \Magento\Catalog\Block\Product\Context $context,
@@ -33,6 +37,9 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
 		\Magento\Framework\App\ResourceConnection $resource,
 		\Magento\Framework\Url\Helper\Data $urlHelper,
 		\Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory $attributeCollection,
+		\Magento\Reports\Model\ResourceModel\Product\CollectionFactory $mostViewproductsFactory,
+		\Magento\Reports\Model\Product\Index\Viewed $recenView,
+		\Magento\Reports\Block\Product\Viewed $recentlyViewed,
         array $data = []
     ) {
         $this->_productCollectionFactory = $productCollectionFactory;
@@ -48,13 +55,12 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
         );
 		$this->_attributeCollection = $attributeCollection;
 		$this->_category_id = 0;
+		$this->_mostViewProduct = $mostViewproductsFactory;
+		$this->_recenView = $recenView;
     }
 	
 	public function _toHtml()
     {
-		if($this->getViewMode() == 'mode_list'){
-			$this->setTemplate('widget/product_list.phtml');
-		}
         if($this->getViewMode() == 'mode_grid_custom'){
 			$this->setTemplate('widget/product_grid_custom.phtml');
 		}
@@ -64,6 +70,9 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
 	public function getProductCollection()
     {
         $collection = $this->_productCollectionFactory->create();
+		if($this->getTyleList() == 'most_view'){
+			$collection = $this->_mostViewProduct->create();
+		}
         $collection->setVisibility($this->_catalogProductVisibility->getVisibleInCatalogIds());
 		if($this->hasData('category_id')){
 			$this->_category_id = str_replace( 'category/', '', $this->getData('category_id') );
@@ -95,9 +104,19 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
 		if($this->getTyleList() == 'new'){
 			$collection = $this->getNewProduct($collection);
 		}
+
+		if($this->getTyleList() == 'most_view'){
+			$collection = $this->getMostViewProduct($collection);
+		}
+
+		
 		
 		$collection->setPageSize($this->getProductsCount())
 				->setCurPage(1);
+
+		if($this->getTyleList() == 'recen_view'){
+			return $this->getRecenViewProduct();
+		}		
         return $collection;
     }
 	
@@ -183,6 +202,25 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct impleme
 		$collection->getSelect()->where('price_index.final_price < price_index.price');
         return $collection;
     }
+
+	public function getMostViewProduct($collection){
+		$storeId = $this->_storeManager->getStore(true)->getId();
+		$collection = $this->_addProductAttributesAndPrices($collection)
+			->addAttributeToSelect('*')
+			->setStoreId($storeId)
+			->addStoreFilter($storeId);
+		
+		return $collection;
+	}
+
+	public function getRecenViewProduct(){
+		$collection = $this->_recenView->getCollection()->addAttributeToSelect('*');
+		$collection->setOrder('product_id', 'desc');
+		$collection->setPageSize(12)->load();
+		// $collection =$this->_recenView->getItemsCollection()->getData();
+		$this->setRecentlyviewedcol($collection);
+		return $this->getRecentlyviewedcol();
+	}
 	
 	public function getProductsCount()
     {

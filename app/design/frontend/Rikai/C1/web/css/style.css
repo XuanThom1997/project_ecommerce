@@ -12,6 +12,9 @@
 .product-name {
     margin-top: 15px;
     font-size: 12px;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .title {
@@ -99,11 +102,32 @@ a.fonts16 {
     display: block;
 }
 
-i.fas.fa-user-circle {
+i.fas.fa-user-circle, i.far.fa-heart {
     color: black;
 }
 
 
 .title-menu{
     padding-top:10px;
+}
+
+.footer-contact{
+    float: right;
+}
+
+a.sssssss{
+    display: inherit;
+}
+
+div#footer-contact{
+    float: right;
+}
+
+div#footer-helper {
+    display: inline-block;
+    padding-right: 100px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
 }

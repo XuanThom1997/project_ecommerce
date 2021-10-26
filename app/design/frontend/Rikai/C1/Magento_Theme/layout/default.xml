@@ -31,24 +31,50 @@
         </referenceBlock>
         <referenceContainer name="main">
             <container label="Category List" name="column_category" htmlTag="div" htmlClass="column-category" />
-            <container label="Products List" name="column_product" htmlTag="div" htmlClass="column-product" />
+            <container label="Products List" name="column_product" htmlTag="div" htmlClass="column-product">
+                <block class="Magento\Catalog\Block\Widget\RecentlyViewed" name="recently_viewed" template="Rikai_WidgetProduct::product/viewed.phtml" before="-">
+                    <arguments>
+                        <argument name="uiComponent" xsi:type="string">widget_recently_viewed</argument>
+                        <argument name="page_size" xsi:type="number">5</argument>
+                        <argument name="show_attributes" xsi:type="string">name,image,price</argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceContainer>
         <referenceBlock name="top.links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="copyright" remove="true" />
 	    <referenceBlock name="advanced-search-link" remove="true" />
-<!--
         <referenceContainer name="footer-container">
             <referenceContainer name="footer" remove="true" />
-            <container name="footer_cotent" as="footer_content" label="Page Footer" htmlTag="div" htmlId="gblFooter" htmlClass="footer">
-                <container name="wrapper" as="wrapper" label="Wraper Footer" htmlTag="div" htmlId="fWrapper">
-                    <block class="Rikai\C1\Block\Footer\Content" name="footer-sitemap" as="footer-sitemap" template="Rikai_C1::footer/content.phtml" before="fcorporate"/>
-                    <block class="Rikai\C1\Block\Footer\Endding" name="fcorporate" as="fcorporate" template="Rikai_C1::footer/endding.phtml" after="fcorporate"/>
+            <container name="footer_cotent" as="footer_content" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <container name="footer-top" htmlTag="div" htmlClass="footer-top">
+                    <container name="wrapper" as="wrapper"  htmlTag="div" htmlId="footer-contact" before="custom-footer-helper4">
+                        <block class="Rikai\C1\Block\Footer\Contact" name="fcorporate" as="fcorporate" template="Rikai_C1::contact.phtml" />
+                    </container>
+                    <container name="custom-footer-helper"  htmlTag="div" htmlId="footer-helper">
+                        <block class="Rikai\C1\Block\Footer\Helper" name="footer-helper" template="Rikai_C1::helper.phtml" />
+                    </container>
+                    <container name="custom-footer-helper2"  htmlTag="div" htmlId="footer-helper">
+                        <block class="Rikai\C1\Block\Footer\Helper" name="footer-helper2" template="Rikai_C1::helper.phtml" />
+                    </container>
+                    <container name="custom-footer-helper3"  htmlTag="div" htmlId="footer-helper">
+                        <block class="Rikai\C1\Block\Footer\Helper" name="footer-helper3" template="Rikai_C1::helper.phtml" />
+                    </container>
+                    <container name="custom-footer-helper4"  htmlTag="div" htmlId="footer-helper">
+                        <block class="Rikai\C1\Block\Footer\Helper" name="footer-helper4" template="Rikai_C1::helper.phtml" />
+                    </container>
+                </container>
+                <container name="footer-bottom" htmlTag="div" htmlClass="footer-bottom" >
+                    <block class="Rikai\C1\Block\Footer\Bottom" name="link-footer-bottom" template="Rikai_C1::bottom.phtml" />
                 </container>
             </container>
-        </referenceContainer> -->
+        </referenceContainer>
     <referenceBlock name="page.main.title" display="false"/>
 
-	<referenceBlock name="advanced-search-link" remove="true" />
+	<referenceBlock name="dropdown-header-notification" remove="true" />
+    <referenceBlock name="test-dropdown" remove="true" />
+    <referenceBlock name="advanced-search-link" remove="true" />
+     <referenceBlock name="recently_viewed" remove="true" />
     </body>
 </page>

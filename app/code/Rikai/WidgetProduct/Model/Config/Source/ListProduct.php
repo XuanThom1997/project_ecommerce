@@ -23,7 +23,9 @@ class ListProduct implements \Magento\Framework\Option\ArrayInterface
 			['value' => 'new', 'label' => __('New Product')],
 			['value' => 'sale', 'label' => __('Sale')],
 			['value' => 'top_rate', 'label' => __('Top Rate')],
-			['value' => 'attribute', 'label' => __('Filter By Attribute')]
+			['value' => 'attribute', 'label' => __('Filter By Attribute')],
+            ['value' => 'most_view', 'label' => __('Most View')],
+            ['value' => 'recen_view', 'label' => __('Recen View')]
 		];
     }
 }
