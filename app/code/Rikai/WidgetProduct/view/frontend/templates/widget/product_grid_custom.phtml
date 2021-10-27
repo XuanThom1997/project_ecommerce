@@ -20,9 +20,8 @@
 <div class="block-product-list">
     <?php if($this->getData('title')): ?>
     <div class="block-title">
-        <h2 class="title"><?php echo $this->getData('title'); ?><?php if($block->getCategoryId() > 2 ): ?><a
-                class="link-view-all" href="<?php echo $categoryIdUrl; ?>">View
-                all</a><?php endif ?></h2>
+        <h2 class="title-custom"><?php echo $this->getData('title'); ?><?php if($block->getCategoryId() > 2 ): ?><a
+                class="link-view-all" href="<?php echo $categoryIdUrl; ?>"><?php echo __('View all');?></a><?php endif ?></h2>
     </div>
     <?php if(count($products)>0): ?>
     <div id="myCarousel-<?php echo $blockId ?>" class="carousel slide" data-ride="carousel" data-interval="500000">
