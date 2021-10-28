@@ -1,0 +1,39 @@
+<div class="dropdown-test">
+    <i class="fas fa-language"></i>
+
+    <div class="dropdown-test-content language">
+        <div class="s-header-dropdown-list ">
+            <ul>
+                <li><a class="s-header-dropdown-list__item lang" value="ja_JP" href="javascript:void(0)">Japanese</a></li>
+                <li><a class="s-header-dropdown-list__item lang" value="en_US" href="javascript:void(0)">English</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<script type="text/javascript">
+    require(["jquery", "mage/url"],function($, urlBuilder) {
+        $(document).ready(function() {
+            $('.lang').click(function(){
+                var value = $(this).attr("value");
+                console.log(value)
+                var url = urlBuilder.build('lang/ajax/index');
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {
+                        value: value,
+                    },
+                    success: function(response) {
+                        console.log(response);
+                        location.reload();
+                    },
+                    error: function (xhr, status, errorThrown) {
+                        console.log('Error happens. Try again.');
+                    }
+                });
+            });
+        });
+    });
+</script>
