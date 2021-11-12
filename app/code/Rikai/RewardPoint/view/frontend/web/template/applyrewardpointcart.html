@@ -1,0 +1,30 @@
+
+<form class="form form-discount" id="reward-form">
+    <div class="fieldset coupon">
+        <div class="field">
+            <span >
+                <!-- ko i18n: 'You have '--><!-- /ko --><strong><!-- ko text: getFormatReward()--><!-- /ko --></strong>    
+            </span>
+            <label class="label" for="discount-code">
+                <span data-bind="i18n: 'Enter how many points to spend'"></span>
+            </label>
+            <div class="control">
+                <input class="input-text"
+                       type="number"
+                       id="reward-point"
+                       name="reward-point"
+                       data-validate="{'required-entry':true}"
+                       data-bind="value: rewardPoint, attr:{disabled:isApplied2() , placeholder: $t('Enter Reward Point')}, valueUpdate: 'afterkeydown' " />
+            </div>
+        </div>
+    </div>
+    <div class="actions-toolbar">
+        <div class="primary">
+                <!-- ko ifnot: isApplied2() -->
+                <button class="action apply primary" type="submit" data-bind="'value': $t('Spent Reward Point'), click: applyrewardpoint">
+                    <span><!-- ko i18n: 'Apply Reward Point'--><!-- /ko --></span>
+                </button>
+                <!-- /ko -->
+        </div>
+    </div>
+</form>

@@ -1,0 +1,47 @@
+<div>
+  <div class="label">
+    <span class="reward-point">Reward Points</span>
+  </div>
+  <div class="block-reward">
+    <div class="block reward-blance row-mp">
+      <div class="rikai-sm-3">
+        <div class="box-balance available">
+          <span><strong><?php echo $block->getAvailableBalance(); ?></strong></span>
+        </div>
+        <div class="label reward-type"><span><?php echo __('Available balance'); ?></span></div>
+      </div>
+      <div class="rikai-sm-3">
+        <div class="box-balance earned">
+          <span><strong><?php echo $block->getEarned(); ?></strong></span>
+        </div>
+        <div class="label reward-type"><span><?php echo __('Total Earned'); ?></span></div>
+      </div>
+      <div class="rikai-sm-3">
+        <div class="box-balance spent">
+          <span><strong><?php echo $block->getSpent(); ?></strong></span>
+        </div>
+        <div class="label reward-type"><span><?php echo __('Total spent'); ?></span></div>
+      </div>
+    </div>
+    <div class="block reward-information mp-clear">
+      <div class="block-title">
+        <strong><?php echo __('Reward information'); ?></strong>
+      </div>
+      <div class="block-content">
+        <div class="box box-exchange">
+        <strong class="box-title"><span><?php echo __('Current exchange rates:'); ?></span></strong>
+          <div class="box-content">
+            <div class="earning-rate"><span><?php echo $block->getEarningRate(); ?></div>
+            <div class="spending-rate"><span><?php echo $block->getSpendingRate(); ?></div>
+          </div>
+        </div>
+        <div class="box box-point-expired">
+          <strong class="box-title"><span><?php echo __('Day'); ?></span></strong>
+          <div class="box-content expired">
+            <span><?php echo $block->getExpired(); ?></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

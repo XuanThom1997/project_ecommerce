@@ -131,3 +131,62 @@ div#footer-helper {
 .footer-bottom {
     padding-top: 30px;
 }
+
+span.reward-point {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.box-balance {
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+}
+
+.box-balance.available {  
+    background-color: #65d59a;
+}
+
+.box-balance.earned {  
+    background-color: #6492f0;
+}
+
+.box-balance.spent {  
+    background-color: #89c65e;
+}
+
+.block-title {
+    border-bottom: 1px solid #c6c6c6;
+    padding-bottom: 10px;
+}
+
+.block.reward-information.mp-clear {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.label.reward-type {
+    width: 90%;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.block.reward-blance.row-mp {
+    display: inline-block;
+    width: 100%;
+}
+
+.rikai-sm-3{
+    width: 33%;
+    display: block;
+    margin-top: 30px;
+    float: left;
+    position: relative;
+}
+
+
+

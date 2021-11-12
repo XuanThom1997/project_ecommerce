@@ -29,7 +29,7 @@ class Index extends \Magento\Framework\App\Action\Action
          //echo  $value;
          $this->_configInterface->saveConfig('general/locale/code', $value, 'default', 0);
         //echo  $this->_config->getValue('general/locale/code', \Magento\Store\Model\ScopeInterface::SCOPE_STORE,0);
-        $types = array('config','layout','block_html','collections','reflection','db_ddl','eav','config_integration','config_integration_api','full_page','translate','config_webservice');
+        $types = array('translate');
         foreach ($types as $type) {
             $this->_cacheTypeList->cleanType($type);
         }

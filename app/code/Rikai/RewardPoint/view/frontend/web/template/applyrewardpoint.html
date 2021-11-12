@@ -1,0 +1,62 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!-- ko if: isCustomer -->
+<div class="payment-option _collapsible opc-payment-additional discount-code"
+     data-bind="mageInit: {'collapsible':{'openedState': '_active'}}">
+    <div class="payment-option-title field choice" data-role="title">
+        <span class="action action-toggle" id="block-discount-heading" role="heading" aria-level="2">
+            <!-- ko i18n: 'Spend Your Points'--><!-- /ko -->
+        </span>
+       
+    </div>
+    <div class="payment-option-content" data-role="content">
+        <span >
+            <!-- ko i18n: 'You have '--><!-- /ko --><strong><!-- ko text: getFormatReward()--><!-- /ko --></strong>
+            
+        </span><br>
+        <span><strong><!-- ko i18n: 'Choose how many points to spend'--><!-- /ko --></strong></span><br>
+        <!-- ko foreach: getRegion('messages') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <form class="form form-discount" id="reward-form">
+            <div class="payment-option-inner">
+                <div class="field">
+                    <label class="label" for="discount-code">
+                        <span data-bind="i18n: 'Enter Reward Point'"></span>
+                    </label>
+                    <div class="control">
+                        <input class="input-text"
+                               type="number"
+                               id="reward-point"
+                               name="reward-point"
+                               data-validate="{'required-entry':true}"
+                               data-bind="value: rewardPoint, attr:{disabled:isApplied2() , placeholder: $t('Enter Reward Point')}, valueUpdate: 'afterkeydown' " />
+                    </div>
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary">
+                        <!-- ko ifnot: isApplied2() -->
+                        <button class="action action-apply" type="submit" data-bind="'value': $t('Apply Reward Point'), click: applyrewardpoint">
+                            <span><!-- ko i18n: 'Apply Reward Point'--><!-- /ko --></span>
+                        </button>
+                        <!-- /ko -->
+                         <!-- ko if: isApplied2() -->
+                         <button class="action action-cancel" type="submit" data-bind="'value': $t('Cancel'), click: cancel">
+                            <span><!-- ko i18n: 'Cancel Reward Point'--><!-- /ko --></span>
+                        </button>
+                        <!-- /ko -->
+
+                </div>
+            </div>
+             <!-- ko foreach: getRegion('captcha') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        </form>
+    </div>
+</div>
+<!-- /ko -->

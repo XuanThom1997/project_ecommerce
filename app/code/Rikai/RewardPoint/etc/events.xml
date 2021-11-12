@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_invoice_pay">
+        <observer name="rikai_rewardPoint_sales_order_invoice_pay" instance="Rikai\RewardPoint\Observer\InsertRewardPoint"/>
+    </event>
+    <event name="checkout_submit_all_after">
+         <observer name="rikai_rewardPoint_order_place_after_action" instance="Rikai\RewardPoint\Observer\PlaceOrder"/>
+    </event>
+    <event name="order_cancel_after">
+         <observer name="rikai_rewardPoint_order_cancel_after_action" instance="Rikai\RewardPoint\Observer\CancelOrder"/>
+    </event>
+   
+</config>

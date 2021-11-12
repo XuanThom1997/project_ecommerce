@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Checkout\Model\Cart" type="Rikai\RewardPoint\Model\Cart" />     
+    <preference for="Magento\Quote\Model\Cart\CartTotalRepository" type="Rikai\RewardPoint\Model\Cart\CartTotalRepository" /> 
+    <preference for="Rikai\RewardPoint\Api\TestInterface" type="Rikai\RewardPoint\Model\Test"/>
+    <!-- <preference for="Rikai\RewardPoint\Api\Data\TotalsInterface" type="Rikai\RewardPoint\Model\Cart\Totals" /> -->
+    <preference for="Rikai\RewardPoint\Api\MessageInterface" type="Rikai\RewardPoint\Model\Message"/>
+    <preference for="Magento\Sales\Block\Order\Totals" type="Rikai\RewardPoint\Block\Order\Totals"/>
+    <preference for="Magento\Sales\Block\Adminhtml\Order\Totals" type="Rikai\RewardPoint\Block\Adminhtml\Order\Totals"/>
+    <!-- <preference for="Magento\Quote\Model\Cart\Totals" type="Rikai\RewardPoint\Model\Cart\Totals"/>
+    <preference for="Magento\Quote\Api\Data\TotalsInterface" type="Rikai\RewardPoint\Api\Data\TotalsInterface"/> -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sales_order_grid_data_source" xsi:type="string">Rikai\RewardPoint\Model\ResourceModel\Order\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Rikai\RewardPoint\Model\ResourceModel\Order\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sales_order_grid</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>
+        </arguments>
+    </type>
+     <!-- <type name="Magento\Quote\Model\Quote\TotalsCollector">
+        <plugin name="show-points-item" type="Rikai\RewardPoint\Plugin\Quote\TotalsCollectorPlugin" sortOrder="10"/>
+    </type> -->
+    
+</config>
+
+
