@@ -33,6 +33,7 @@ class Link extends \Magento\Framework\View\Element\Template
                     <ul>
                         <li><a href="'.$this->_urlInterface->getUrl('customer/account').'">'.__('My Account').'</a></li>
                         <li><a href="'.$this->_urlInterface->getUrl('sales/order/history').'">'.__('My Order').'</a></li>
+                        <li><a href="'.$this->_urlInterface->getUrl('reward/customer').'">'.__('Reward Point').'</a></li>
                         <li><a href="'.$this->_urlInterface->getUrl('customer/account/logout').'">'.__('Logout').'</a></li>
                     </ul>
                 </div></div>';

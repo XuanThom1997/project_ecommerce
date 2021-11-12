@@ -1,0 +1,47 @@
+
+<?php 
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $userContext = $objectManager->get('Magento\Framework\App\Http\Context');
+    $isLoggedIn = $userContext->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
+    if($isLoggedIn):
+?> 
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var \Magento\Framework\View\Element\AbstractBlock $block
+ */
+
+// We should use strlen function because coupon code could be "0", converted to bool will lead to false
+$hasSpentRewardPoint = (bool) strlen($block->getSpentRewardPoint());
+?>
+<div class="block discount"
+     id="reward-point"
+     data-mage-init='{"collapsible":{"active": <?= $hasSpentRewardPoint ? 'true' : 'false' ?>, "openedState": "active", "saveState": false}}'
+>
+    <div class="title" data-role="title">
+        <strong id="block-reward-point-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('Spent Reward Point')) ?></strong>
+    </div>
+    <div class="content" data-role="content" aria-labelledby="block-discount-heading">
+        <div id="reward-point-component" data-bind="scope:'rewardpointapply'">
+            <!-- ko template: getTemplate() --> <!-- /ko -->
+            <script type="text/x-magento-init">
+            {
+                "#reward-point-component": {
+                    "Magento_Ui/js/core/app": {
+                    "components": {
+                            "rewardpointapply": {
+                                "component": "Rikai_RewardPoint/js/view/applyrewardpointcart"
+                            }
+                        }
+                    }
+                }
+            }
+            </script>
+        </div>
+    </div>
+</div>
+<?php endif ?>

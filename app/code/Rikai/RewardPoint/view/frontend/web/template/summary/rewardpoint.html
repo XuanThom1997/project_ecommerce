@@ -1,0 +1,32 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!-- ko if: isCustomerId() -->
+<tr class="totals reward-point excl">
+    <th class="mark" colspan="1" scope="row" data-bind="text: getTitleReward()"></th>
+    <td class="amount">
+        <span class="reward_point"
+        data-bind="text: getRewardValue()"></span>
+    </td>
+</tr>
+
+<!-- ko if: isSpentRewardValue() -->
+<tr class="totals spent-reward-point excl">
+    <th class="mark" colspan="1" scope="row" data-bind="i18n: 'Spent'"></th>
+    <td class="amount">
+        <span class="reward_point"
+        data-bind="text: getSpentRewardValue()"></span>
+    </td>
+</tr>
+<tr class="totals spent-reward-point excl">
+    <th class="mark" colspan="1" scope="row" data-bind="i18n: 'ODDPOINTs'"></th>
+    <td class="amount">
+        <span class="reward_point"
+        data-bind="text: getSpentRewardPrice()"></span>
+    </td>
+</tr>
+<!-- /ko -->
+<!-- /ko -->
