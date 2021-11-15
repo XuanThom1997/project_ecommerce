@@ -7,18 +7,22 @@ class Totals extends \Magento\Sales\Block\Adminhtml\Order\Totals{
     {
         parent::_initTotals();
         if ($this->getSource()->getCustomerId() != null) {
-            $this->_totals['earned'] = new \Magento\Framework\DataObject(
-                [
-                    'code' => 'earned', 
-                    'value' => $this->getSource()->getRewardPoint(),
-                    'label' => __('Earned')]
-            );
-            $this->_totals['spent'] = new \Magento\Framework\DataObject(
-                ['code' => 'spent', 'value' => $this->getSource()->getSpentRewardPoint(), 'label' => __('Spent')]
-            );
-            $this->_totals['ODDPOINTs'] = new \Magento\Framework\DataObject(
-                ['code' => 'ODDPOINTs', 'value' => -$this->getSource()->getSpentRewardPoint(), 'label' => __('ODDPOINTs')]
-            );
+            if($this->getSource()->getRewardPoint() != null){
+                $this->_totals['earned'] = new \Magento\Framework\DataObject(
+                    [
+                        'code' => 'earned', 
+                        'value' => $this->getSource()->getRewardPoint(),
+                        'label' => __('Earned')]
+                );
+            }
+            if($this->getSource()->getSpentRewardPoint() != null){
+                $this->_totals['spent'] = new \Magento\Framework\DataObject(
+                    ['code' => 'spent', 'value' => $this->getSource()->getSpentRewardPoint(), 'label' => __('Spent')]
+                );
+                $this->_totals['ODDPOINTs'] = new \Magento\Framework\DataObject(
+                    ['code' => 'ODDPOINTs', 'value' => -$this->getSource()->getSpentRewardPoint(), 'label' => __('ODDPOINTs')]
+                );
+            }    
         }
        
         return $this;

@@ -13,15 +13,19 @@ class Totals extends \Magento\Sales\Block\Order\Totals{
         );
 
         if ($this->getSource()->getCustomerId() != null) {
-            $this->_totals['earned'] = new \Magento\Framework\DataObject(
-                ['code' => 'earned', 'value' => $source->getRewardPoint(), 'label' => __('Earned')]
-            );
-            $this->_totals['spent'] = new \Magento\Framework\DataObject(
-                ['code' => 'spent', 'value' => $source->getSpentRewardPoint(), 'label' => __('Spent')]
-            );
-            $this->_totals['ODDPOINTs'] = new \Magento\Framework\DataObject(
-                ['code' => 'ODDPOINTs', 'value' => -$source->getSpentRewardPoint(), 'label' => __('ODDPOINTs')]
-            );
+            if($source->getRewardPoint() != null){
+                $this->_totals['earned'] = new \Magento\Framework\DataObject(
+                    ['code' => 'earned', 'value' => $source->getRewardPoint(), 'label' => __('Earned')]
+                );
+            }
+            if($source->getSpentRewardPoint() != null){
+                $this->_totals['spent'] = new \Magento\Framework\DataObject(
+                    ['code' => 'spent', 'value' => $source->getSpentRewardPoint(), 'label' => __('Spent')]
+                );
+                $this->_totals['ODDPOINTs'] = new \Magento\Framework\DataObject(
+                    ['code' => 'ODDPOINTs', 'value' => -$source->getSpentRewardPoint(), 'label' => __('ODDPOINTs')]
+                );
+            }   
         }
 
         /**
